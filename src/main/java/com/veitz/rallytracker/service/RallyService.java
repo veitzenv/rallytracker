@@ -73,4 +73,15 @@ public class RallyService {
         return posiciones;
     }
 
+    public Auto inscribirAuto(String piloto, int dorsal) {
+        Auto auto = new Auto();
+        auto.setPiloto(piloto);
+        auto.setDorsal(dorsal);
+        autoRepository.save(auto);
+
+        return auto;
+
+    }
+
+
 }

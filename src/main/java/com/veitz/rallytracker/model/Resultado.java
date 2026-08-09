@@ -1,5 +1,6 @@
 package com.veitz.rallytracker.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
@@ -12,6 +13,7 @@ public class Resultado {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
+    @JsonIgnore
     private Auto referencia;
     private int tramo;
     private int tiempo;
