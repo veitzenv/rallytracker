@@ -14,7 +14,7 @@ public class Auto {
     private String piloto;
     private int dorsal;
     private int tiempoTotal;
-    @OneToMany (mappedBy = "referencia")
+    @OneToMany (mappedBy = "referencia") // Relación uno a muchos. El mappedBy indica que esta clase es la "dueña" de la relación.
     private List<Resultado> listResultados;
 
 }
